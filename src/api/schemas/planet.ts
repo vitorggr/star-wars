@@ -1,4 +1,4 @@
-import {GenericSchema} from "./generic.schema";
+
 
 /* tslint:disable */
 /**
@@ -6,6 +6,8 @@ import {GenericSchema} from "./generic.schema";
  * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
  * and run json-schema-to-typescript to regenerate this file.
  */
+
+import { GenericSchema } from "./generic.schema";
 
 
 /**

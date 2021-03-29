@@ -9,6 +9,7 @@
 import { GenericSchema } from "./generic.schema";
 
 
+
 /**
  * A species within the Star Wars universe
  */

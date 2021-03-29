@@ -5,7 +5,8 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
- import {GenericSchema} from "./generic.schema";
+import { GenericSchema } from "./generic.schema";
+
 
  /**
   * A person within the Star Wars universe
