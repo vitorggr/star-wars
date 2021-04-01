@@ -1,30 +1,13 @@
 import { useEffect, useState } from "react";
 import { genericController, PageData } from "./api/generic-api";
+import { Film } from "./api/schemas/film";
 import { People } from "./api/schemas/people";
+import {Detalhe} from  "./components/detalhe/detalhe";
+import "./styles.css";
 
 export const App = () => {
-  const { getAll } = genericController<People>("people");
-  const [people, setPeople] = useState<People[]>();
-  const [page, setPage] = useState<PageData>();
-  useEffect(() => {
-    getAll(3).then((valor) => {
-      setPeople(valor.dados);
-      setPage(valor.page);
-    });
-  }, []);
 
-  if (people) {
-    return (
-      <>
-      <div>Paginação Anterior: {page?.anterior} - Próximo: {page?.proximo}</div>
-        {people.map((person) => (
-          <div>
-            {person.name}-{person.gender}
-          </div>
-        ))}
-      </>
-    );
-  } else {
-    return <div></div>;
-  }
+      return(
+        <Detalhe<Film> id={1} controller="films"/>
+      )
 };
